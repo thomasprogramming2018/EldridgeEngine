@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_EldridgeEngine_FILE /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine)
+set(__QT_DEPLOY_TARGET_EldridgeEngine_TYPE EXECUTABLE)
