@@ -447,4 +447,6 @@ CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidgetitemiterator.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidgetitemiterator.h \
+ /usr/include/c++/14/unordered_set \
+ /usr/include/c++/14/bits/unordered_set.h

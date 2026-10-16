@@ -78,7 +78,7 @@ public:
     }
 
 
-    void deleteObject();
+    void deleteObject(uint64_t id);
 
 
 signals:

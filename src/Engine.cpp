@@ -18,25 +18,55 @@ void Engine::initializeGraphics()
 }
 
 
-void Engine::deleteObject()
-{
-    if (selectedObject)
-    {
-        auto it = std::find_if(
-            objects.begin(),
-            objects.end(),
-            [this](const std::unique_ptr<SceneObject>& obj)
-            {
-                return obj.get() == selectedObject;
-            }
-        );
+#include <unordered_set>
 
-        if (it != objects.end())
-        {
-            objects.erase(it);
-            selectedObject = nullptr;
-        }
+void Engine::deleteObject(uint64_t id)
+{
+    SceneObject* root = findById(id);
+    if (!root) return;
+
+    std::unordered_set<SceneObject*> toDelete;
+
+    // Collect parent and all descendants
+    std::function<void(SceneObject*)> collect =
+        [&](SceneObject* obj)
+    {
+        if (!toDelete.insert(obj).second)
+            return;
+
+        for (SceneObject* child : obj->children)
+            collect(child);
+    };
+
+    collect(root);
+
+    // Detach root from its surviving parent
+    if (root->parent)
+    {
+        auto& siblings = root->parent->children;
+
+        siblings.erase(
+            std::remove(siblings.begin(), siblings.end(), root),
+            siblings.end()
+        );
     }
+
+    // Avoid dangling selection pointer
+    if (toDelete.count(selectedObject))
+    {
+        selectedObject = nullptr;
+        gizmos->state->dragging_state = gState::None;
+    }
+
+    // Destroy the entire subtree
+    objects.erase(
+        std::remove_if(objects.begin(), objects.end(),
+            [&](const std::unique_ptr<SceneObject>& obj)
+            {
+                return toDelete.count(obj.get()) > 0;
+            }),
+        objects.end()
+    );
 }
 
 

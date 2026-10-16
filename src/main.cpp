@@ -128,14 +128,14 @@ int main(int argc, char *argv[])
  
     QObject::connect(
         hierarchy2,
-       &Hierarchy::deleteRequested,
-       &window,
-       [&](uint64_t id)
-       {
-           engine.deleteObject();
-           hierarchy2->refresh();
-           viewport->update();
-       }
+        &Hierarchy::deleteRequested,
+        &window,
+        [&](uint64_t id)
+        {
+            engine.deleteObject(id);
+            hierarchy2->refresh();
+            viewport->update();
+        }
     );
     
     QObject::connect(
