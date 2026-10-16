@@ -48,7 +48,7 @@ public:
 
     void updateTransform();
 
-    std::unique_ptr<QMatrix4x4> uModel = std::make_unique<QMatrix4x4>();
+    std::unique_ptr<QMatrix4x4> uModel;
 
 
 
@@ -58,12 +58,24 @@ public:
     AABB getWorldAABB() const
     {
         QVector3D pos(x, y, z);
-    
+
         return {
             mesh->bounds.min + pos,
             mesh->bounds.max + pos
         };
     }
+
+    SceneObject* parent = nullptr;
+
+    std::vector<SceneObject*> children;
+
+
+    void setParent(SceneObject* newParent);
+
+
+    QMatrix4x4 getWorldMatrix() const;
+
+    QMatrix4x4 getLocalMatrix() const;
 
 
 

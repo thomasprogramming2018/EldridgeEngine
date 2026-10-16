@@ -7,11 +7,14 @@
 
 #include "Raycast.h"
 
+#include <algorithm>
+
+
 
 void SceneObject::updateTransform()
 {
     uModel->setToIdentity();
-    uModel->translate(x, y, z);
+    *uModel = getWorldMatrix();
 }
 
 
@@ -26,6 +29,66 @@ SceneObject::SceneObject(
 
     
 
+}
+
+
+void SceneObject::setParent(SceneObject* newParent)
+{
+    // 1. No change needed
+    if (parent == newParent)
+        return;
+
+    // 2. Prevent self-parenting
+    if (newParent == this)
+        return;
+
+    // 3. Prevent circular hierarchies
+    SceneObject* current = newParent;
+
+    while (current != nullptr)
+    {
+        if (current == this)
+            return;
+
+        current = current->parent;
+    }
+
+    // 4. Detach from old parent
+    if (parent != nullptr)
+    {
+        auto& siblings = parent->children;
+
+        siblings.erase(
+            std::remove(siblings.begin(), siblings.end(), this),
+            siblings.end()
+        );
+    }
+
+    // 5. Assign new parent
+    parent = newParent;
+
+    // 6. Register with new parent
+    if (parent != nullptr)
+        parent->children.push_back(this);
+}
+
+QMatrix4x4 SceneObject::getLocalMatrix() const
+{
+    QMatrix4x4 local;
+
+    local.translate(x, y, z);
+
+    return local;
+}
+
+QMatrix4x4 SceneObject::getWorldMatrix() const
+{
+    QMatrix4x4 local = getLocalMatrix();
+
+    if (parent == nullptr)
+        return local;
+
+    return parent->getWorldMatrix() * local;
 }
 
 void SceneObject::initializeGPU(ResourceManager& resources)
