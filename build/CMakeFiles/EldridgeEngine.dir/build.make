@@ -204,6 +204,62 @@ CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/heirarchy.cpp -o CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.s
 
+CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
+CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/Material.cpp
+CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/Material.cpp
+
+CMakeFiles/EldridgeEngine.dir/src/Material.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EldridgeEngine.dir/src/Material.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zeus/Documents/EldridgeEnginev2.0/src/Material.cpp > CMakeFiles/EldridgeEngine.dir/src/Material.cpp.i
+
+CMakeFiles/EldridgeEngine.dir/src/Material.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EldridgeEngine.dir/src/Material.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zeus/Documents/EldridgeEnginev2.0/src/Material.cpp -o CMakeFiles/EldridgeEngine.dir/src/Material.cpp.s
+
+CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
+CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.cpp
+CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.cpp
+
+CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.cpp > CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.i
+
+CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.cpp -o CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.s
+
+CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
+CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/inspector.cpp
+CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/inspector.cpp
+
+CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zeus/Documents/EldridgeEnginev2.0/src/inspector.cpp > CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.i
+
+CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zeus/Documents/EldridgeEnginev2.0/src/inspector.cpp -o CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.s
+
+CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
+CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/MaterialAsset.cpp
+CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/MaterialAsset.cpp
+
+CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zeus/Documents/EldridgeEnginev2.0/src/MaterialAsset.cpp > CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.i
+
+CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zeus/Documents/EldridgeEnginev2.0/src/MaterialAsset.cpp -o CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.s
+
 # Object files for target EldridgeEngine
 EldridgeEngine_OBJECTS = \
 "CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o" \
@@ -214,7 +270,11 @@ EldridgeEngine_OBJECTS = \
 "CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o" \
 "CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o" \
 "CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o" \
-"CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o"
+"CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o" \
+"CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o" \
+"CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o" \
+"CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o" \
+"CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o"
 
 # External object files for target EldridgeEngine
 EldridgeEngine_EXTERNAL_OBJECTS =
@@ -228,6 +288,10 @@ EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o
+EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o
+EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o
+EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o
+EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/build.make
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
 EldridgeEngine: /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.8.2
@@ -238,7 +302,7 @@ EldridgeEngine: /usr/lib/x86_64-linux-gnu/libGLX.so
 EldridgeEngine: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 EldridgeEngine: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.8.2
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable EldridgeEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable EldridgeEngine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EldridgeEngine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

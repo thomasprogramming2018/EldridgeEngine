@@ -446,6 +446,67 @@ CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
  /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/SMGBADRKRP/../../../src/Editor/../Light.h \
  /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/SMGBADRKRP/../../../src/Editor/../ResourceManager.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/SMGBADRKRP/../../../src/Editor/../Material.h \
  /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/SMGBADRKRP/../../../src/Editor/../Gizmos.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmochelpers.h \
- /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/UVLADIE3JM/moc_Engine.cpp
+ /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/UVLADIE3JM/moc_Engine.cpp \
+ /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/UVLADIE3JM/moc_Renderer.cpp \
+ /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/UVLADIE3JM/../../../src/Renderer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/QOpenGLWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/qopenglwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/qtopenglwidgetsexports.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/UVLADIE3JM/../../../src/Camera.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qeventpoint.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qvector2d.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputdevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen_platform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qdeadlinetimer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qelapsedtimer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputmethod.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication_platform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QKeyEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QWheelEvent \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/UVLADIE3JM/moc_inspector.cpp \
+ /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/UVLADIE3JM/../../../src/inspector.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDockWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdockwidget.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/UVLADIE3JM/../../../src/uiComponents/MaterialComponent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDoubleSpinBox \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/I4EOOB5Q7F/moc_MaterialComponent.cpp

@@ -268,6 +268,18 @@
 			null
 		],
 		[
+			"/home/zeus/Documents/EldridgeEnginev2.0/src/Material.h",
+			"Mu",
+			"UVLADIE3JM/moc_Material.cpp",
+			null
+		],
+		[
+			"/home/zeus/Documents/EldridgeEnginev2.0/src/MaterialAsset.h",
+			"Mu",
+			"UVLADIE3JM/moc_MaterialAsset.cpp",
+			null
+		],
+		[
 			"/home/zeus/Documents/EldridgeEnginev2.0/src/Renderer.h",
 			"Mu",
 			"UVLADIE3JM/moc_Renderer.cpp",
@@ -289,6 +301,18 @@
 			"/home/zeus/Documents/EldridgeEnginev2.0/src/Shader.h",
 			"Mu",
 			"UVLADIE3JM/moc_Shader.cpp",
+			null
+		],
+		[
+			"/home/zeus/Documents/EldridgeEnginev2.0/src/inspector.h",
+			"Mu",
+			"UVLADIE3JM/moc_inspector.cpp",
+			null
+		],
+		[
+			"/home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.h",
+			"Mu",
+			"I4EOOB5Q7F/moc_MaterialComponent.cpp",
 			null
 		]
 	],
@@ -368,6 +392,16 @@
 		],
 		[ "/home/zeus/Documents/EldridgeEnginev2.0/src/Engine.cpp", "Mu", null ],
 		[
+			"/home/zeus/Documents/EldridgeEnginev2.0/src/Material.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/zeus/Documents/EldridgeEnginev2.0/src/MaterialAsset.cpp",
+			"Mu",
+			null
+		],
+		[
 			"/home/zeus/Documents/EldridgeEnginev2.0/src/Renderer.cpp",
 			"Mu",
 			null
@@ -383,7 +417,17 @@
 			null
 		],
 		[ "/home/zeus/Documents/EldridgeEnginev2.0/src/Shader.cpp", "Mu", null ],
-		[ "/home/zeus/Documents/EldridgeEnginev2.0/src/main.cpp", "Mu", null ]
+		[
+			"/home/zeus/Documents/EldridgeEnginev2.0/src/inspector.cpp",
+			"Mu",
+			null
+		],
+		[ "/home/zeus/Documents/EldridgeEnginev2.0/src/main.cpp", "Mu", null ],
+		[
+			"/home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.cpp",
+			"Mu",
+			null
+		]
 	],
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0

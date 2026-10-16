@@ -20,6 +20,14 @@ struct Material {
     sampler2D specular;
     vec3 shininess;
     sampler2D normal;
+    sampler2D metallic_tex;
+    vec3 uMetallic;
+
+    sampler2D roughness_tex;
+
+    vec3 roughness;
+
+
 };
 uniform Material material;
 
@@ -49,6 +57,9 @@ struct Object {
     vec3 translate;
 };
 uniform Object object;
+
+
+
 
 
 // Convert tangent-space normal map into world space

@@ -3,6 +3,7 @@
   /home/zeus/Documents/EldridgeEnginev2.0/src/AABB.h \
   /home/zeus/Documents/EldridgeEnginev2.0/src/Gizmos.h \
   /home/zeus/Documents/EldridgeEnginev2.0/src/Light.h \
+  /home/zeus/Documents/EldridgeEnginev2.0/src/Material.h \
   /home/zeus/Documents/EldridgeEnginev2.0/src/Mesh.h \
   /home/zeus/Documents/EldridgeEnginev2.0/src/ResourceManager.h \
   /home/zeus/Documents/EldridgeEnginev2.0/src/SceneObject.h \
@@ -272,6 +273,7 @@
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20iterator.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20memory.h \

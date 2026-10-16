@@ -100,11 +100,15 @@ void SceneObject::initializeGPU(ResourceManager& resources)
     initializeOpenGLFunctions();
 
 
-    const char *vert = "src/shaders/pbr.vert";
+    QByteArray vert = material->resolvePath(material->vert).toUtf8();
+    QByteArray frag = material->resolvePath(material->frag).toUtf8();
 
-    const char *frag = "src/shaders/pbr.frag";
+    shaderP = resources.getShader(
+        vert.constData(),
+        frag.constData()
+    );
 
-    shaderP = resources.getShader(vert, frag);
+
 
     if (shaderP == 0)
         return;

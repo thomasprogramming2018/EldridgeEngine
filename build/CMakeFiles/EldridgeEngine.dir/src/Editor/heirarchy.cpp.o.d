@@ -445,6 +445,9 @@ CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/../Light.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/../ResourceManager.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/../Material.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/../Gizmos.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTreeWidgetItem \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
@@ -477,4 +480,5 @@ CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputmethod.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication_platform.h
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication_platform.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSignalBlocker

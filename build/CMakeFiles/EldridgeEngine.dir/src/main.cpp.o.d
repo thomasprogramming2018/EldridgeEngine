@@ -487,6 +487,9 @@ CMakeFiles/EldridgeEngine.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Light.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/ResourceManager.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/src/Material.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Gizmos.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
@@ -513,4 +516,14 @@ CMakeFiles/EldridgeEngine.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidgetitemiterator.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidgetitemiterator.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/src/inspector.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDoubleSpinBox \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qspinbox.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h

@@ -7,6 +7,12 @@
 
 #include <QtMath>
 #include <algorithm>
+#include <QFileInfo>
+#include <QDebug>
+#include <functional>
+#include <unordered_set>
+#include <exception>
+
 
 void Renderer::updateCameraView()
 {
@@ -276,6 +282,8 @@ void Renderer::mousePressEvent(QMouseEvent* event)
 
     
 
+    emit selectionChanged();
+
     qDebug() << "shoot pos: " << shoot;
 
     qDebug() << "-------------------------";
@@ -356,54 +364,88 @@ void Renderer::initializeGL()
 
     
 
-    for (auto& obj : engine->objects)
-    {
-
-        
-        for (Buffer& buffer : obj->buffers)
-        {
-            if (buffer.type != BufferType::SAMPLER2D)
-                continue;
-
-            QImage image = buffer.sampler2dVal
-                .convertToFormat(QImage::Format_RGBA8888)
-                .mirrored(false, true);
-
-            if (image.isNull())
-            {
-                qWarning() << "Texture failed:"
-                           << buffer.name.c_str();
-                continue;
-            }
-
-            glGenTextures(1, &buffer.textureID);
-            glBindTexture(GL_TEXTURE_2D, buffer.textureID);
-
-            glTexImage2D(
-                GL_TEXTURE_2D, 0, GL_RGBA8,
-                image.width(), image.height(),
-                0, GL_RGBA, GL_UNSIGNED_BYTE,
-                image.constBits()
-            );
-
-            glTexParameteri(GL_TEXTURE_2D,
-                GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-
-            glTexParameteri(GL_TEXTURE_2D,
-                GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-            glTexParameteri(GL_TEXTURE_2D,
-                GL_TEXTURE_WRAP_S, GL_REPEAT);
-
-            glTexParameteri(GL_TEXTURE_2D,
-                GL_TEXTURE_WRAP_T, GL_REPEAT);
-
-            glGenerateMipmap(GL_TEXTURE_2D);
-        }
-    }
-
     glBindTexture(GL_TEXTURE_2D, 0);
 }
+
+void Renderer::refreshMaterialBuffers(SceneObject* obj, const std::vector<PointLight>& nearbyLights) {
+    if (!obj || !obj->material) return;
+    // Called only inside paintGL: the OpenGL context is current here.
+    glActiveTexture(GL_TEXTURE0);
+    for (auto& b : obj->buffers) {
+        if (b.type == BufferType::SAMPLER2D && b.textureID != 0) {
+            glDeleteTextures(1, &b.textureID);
+            b.textureID = 0;
+        }
+    }
+    obj->buffers = obj->material->createPBRMaterial(engine->dlight, nearbyLights);
+    for (auto& b : obj->buffers) {
+        if (b.type != BufferType::SAMPLER2D) continue;
+        const QImage image = b.sampler2dVal.convertToFormat(QImage::Format_RGBA8888).mirrored(false, true);
+        if (image.isNull()) continue;
+        glGenTextures(1, &b.textureID);
+        glBindTexture(GL_TEXTURE_2D, b.textureID);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, image.width(), image.height(),
+                     0, GL_RGBA, GL_UNSIGNED_BYTE, image.constBits());
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    glBindTexture(GL_TEXTURE_2D, 0);
+
+    const QString vert = obj->material->resolvePath(obj->material->vert);
+    const QString frag = obj->material->resolvePath(obj->material->frag);
+    if (!QFileInfo::exists(vert) || !QFileInfo::exists(frag)) {
+        qWarning() << "Invalid material shader path:" << vert << frag;
+    } else {
+        try {
+            const QByteArray vb = vert.toUtf8();
+            const QByteArray fb = frag.toUtf8();
+            const GLuint shader = engine->resources.getShader(vb.constData(), fb.constData());
+            if (shader != 0) obj->shaderP = shader;
+        } catch (const std::exception& e) {
+            qWarning() << "Material shader failed:" << e.what();
+        }
+    }
+    obj->appliedMaterial = obj->material.get();
+    obj->appliedMaterialRevision = obj->material->revision;
+}
+
+void Renderer::updateDynamicPointLights(GLuint program, const std::vector<PointLight>& nearbyLights) {
+    const GLint countLoc = glGetUniformLocation(program, "lightCount");
+    if (countLoc != -1) glUniform1i(countLoc, static_cast<GLint>(nearbyLights.size()));
+    auto setVec = [&](const std::string& key, const QVector3D& value) {
+        const GLint loc = glGetUniformLocation(program, key.c_str());
+        if (loc != -1) glUniform3f(loc, value.x(), value.y(), value.z());
+    };
+    for (std::size_t i = 0; i < nearbyLights.size(); ++i) {
+        const std::string prefix = "lights[" + std::to_string(i) + "].";
+        setVec(prefix + "position", nearbyLights[i].pos);
+        setVec(prefix + "ambient", nearbyLights[i].ambient);
+        setVec(prefix + "diffuse", nearbyLights[i].diffuse);
+        setVec(prefix + "specular", nearbyLights[i].specular);
+    }
+}
+
+void Renderer::releaseObjectTextures(std::uint64_t id) {
+    SceneObject* root = engine->findById(id);
+    if (!root || !isValid()) return;
+    makeCurrent();
+    std::unordered_set<SceneObject*> seen;
+    std::function<void(SceneObject*)> release = [&](SceneObject* obj) {
+        if (!obj || !seen.insert(obj).second) return;
+        for (auto& b : obj->buffers) {
+            if (b.type == BufferType::SAMPLER2D && b.textureID != 0) {
+                glDeleteTextures(1, &b.textureID); b.textureID = 0;
+            }
+        }
+        for (SceneObject* child : obj->children) release(child);
+    };
+    release(root);
+    doneCurrent();
+}
+
 void Renderer::paintGL()
 {
     glClearColor(0.4f, 0.6f, 0.8f, 1.0f);
@@ -411,12 +453,58 @@ void Renderer::paintGL()
     
     for (auto& obj : engine->objects)
     {
+        if (!obj->material || !obj->mesh) continue;
+
+        std::vector<PointLight> nearbyLights;
+
+        QVector3D objectPos =
+            obj->getWorldMatrix().column(3).toVector3D();
+
+        constexpr float radius = 15.0f;
+
+        for (const PointLight& light : engine->lights)
+        {
+            float distanceSquared =
+                (light.pos - objectPos).lengthSquared();
+        
+            if (distanceSquared <= radius * radius)
+            {
+                nearbyLights.push_back(light);
+            }
+        }
+
+
+        std::sort(
+            nearbyLights.begin(),
+            nearbyLights.end(),
+            [&](const PointLight& a, const PointLight& b)
+            {
+                float distanceA =
+                    (a.pos - objectPos).lengthSquared();
+            
+                float distanceB =
+                    (b.pos - objectPos).lengthSquared();
+            
+                return distanceA < distanceB;
+            }
+        );
+
+        if (nearbyLights.size() > 32)
+        {
+            nearbyLights.resize(32);
+        }
 
         if (!obj->isGpuReady)
         {
             obj->initializeGPU(engine->resources);
         }
+        if (!obj->isGpuReady || obj->shaderP == 0) continue;
 
+        if (obj->appliedMaterial != obj->material.get() ||
+            obj->appliedMaterialRevision != obj->material->revision) {
+            refreshMaterialBuffers(obj.get(), nearbyLights);
+        }
+        if (obj->shaderP == 0) continue;
         glUseProgram(obj->shaderP);
 
         GLint location2 = glGetUniformLocation(
@@ -501,6 +589,8 @@ void Renderer::paintGL()
             }
         }
 
+        // Point-light uniforms depend on object position, not just material revision.
+        updateDynamicPointLights(obj->shaderP, nearbyLights);
         glBindVertexArray(obj->mesh->VAO);
 
         glDrawElements(

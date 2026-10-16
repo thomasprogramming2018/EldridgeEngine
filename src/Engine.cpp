@@ -67,6 +67,8 @@ void Engine::deleteObject(uint64_t id)
             }),
         objects.end()
     );
+
+
 }
 
 
@@ -133,27 +135,29 @@ void Engine::createObject(
     std::vector<Buffer> buffers
 )
 {
-    if (type == MaterialType::PBR && buffers.empty())
-    {
-        buffers = createPBRMaterial(
-            dlight,
-            lights,
-            "src/shaders/container2.png",
-            "src/shaders/container2_specular.png",
-            "src/shaders/container2_normal.png"
-        );
-    }
-
     auto mesh = resources.getCubeMesh();
 
-    objects.push_back(
-        std::make_unique<SceneObject>(buffers, mesh)
-    );
+    auto sceneObject =
+        std::make_unique<SceneObject>(buffers, mesh);
+
+    if (type == MaterialType::PBR)
+    {
+        sceneObject->material->vert = "src/shaders/pbr.vert";
+        sceneObject->material->frag = "src/shaders/pbr.frag";
+
+        sceneObject->buffers =
+            sceneObject->material->createPBRMaterial(
+                dlight,
+                lights
+            );
+    }
+
+    // Transfer ownership to Engine
+    objects.push_back(std::move(sceneObject));
 
     emit objectCreated();
-
-
 }
+
     //if (type == MaterialType::PBR)
     //{
         Shader shader;

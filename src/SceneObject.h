@@ -7,6 +7,12 @@
 #include "ResourceManager.h"
 
 
+#include <QString>
+
+
+#include "Material.h"
+
+
 
 
 
@@ -20,9 +26,18 @@ public:
     float z = 0.0f;
 
     
-    Shader shader;
 
-    GLuint shaderP;
+
+    GLuint shaderP = 0;
+
+    // Renderer checks this before uploading new shader/material data.
+    const Material* appliedMaterial = nullptr;
+    std::uint64_t appliedMaterialRevision = 0;
+
+
+
+    std::shared_ptr<Material> material =
+    std::make_shared<Material>();
 
 
 
@@ -53,6 +68,10 @@ public:
 
 
 
+    void updateShader(ResourceManager& resources);
+
+
+
 
 
 
@@ -77,6 +96,9 @@ public:
     QMatrix4x4 getWorldMatrix() const;
 
     QMatrix4x4 getLocalMatrix() const;
+
+
+    QString name = "SceneObject";
 
 
 

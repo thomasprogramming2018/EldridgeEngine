@@ -21,6 +21,9 @@
 
 #include "Editor/heirarchy.h"
 
+#include "inspector.h"
+
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
@@ -30,11 +33,18 @@ int main(int argc, char *argv[])
 
     QTimer timer;
 
-    QDockWidget *inspector = new QDockWidget("Inspector");
 
     QDockWidget *heirarchy = new QDockWidget("heirarchy");
 
     QMainWindow window;
+
+    Inspector* inspector2 = new Inspector(&window);
+
+    window.addDockWidget(
+        Qt::RightDockWidgetArea,
+        inspector2
+    );
+
 
     Engine engine;
 
@@ -79,13 +89,11 @@ int main(int argc, char *argv[])
 
 
 
-    inspector->setWidget(new QLabel("Object properties"));
+
 
 
     
-    window.addDockWidget(
-        Qt::RightDockWidgetArea,
-        inspector);
+
         
     panel->setLayout(layout);
     heirarchy->setWidget(panel);
@@ -132,12 +140,16 @@ int main(int argc, char *argv[])
         &window,
         [&](uint64_t id)
         {
+            inspector2->setObject(nullptr);  // Clear BEFORE destroying SceneObject
+            viewport->releaseObjectTextures(id);
             engine.deleteObject(id);
             hierarchy2->refresh();
             viewport->update();
+
         }
     );
     
+
     QObject::connect(
         hierarchy2,
         &Hierarchy::objectSelected,
@@ -145,13 +157,18 @@ int main(int argc, char *argv[])
         [&](uint64_t id)
         {
             engine.selectById(id);
+
+            inspector2->setObject(engine.selectedObject);
+
             viewport->update();
         }
     );
 
 
 
-
+    QObject::connect(viewport, &Renderer::selectionChanged, &window, [&]() {
+        inspector2->setObject(engine.selectedObject);
+    });
 
     window.setCentralWidget(viewport);
     window.resize(1200, 800);

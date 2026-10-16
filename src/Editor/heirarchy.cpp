@@ -6,6 +6,10 @@
 
 #include <functional>
 
+
+#include <QSignalBlocker>
+
+
 Hierarchy::Hierarchy(Engine* engine, QWidget* parent)
     : QTreeWidget(parent), engine(engine)
 {
@@ -39,14 +43,51 @@ Hierarchy::Hierarchy(Engine* engine, QWidget* parent)
         if (!item) return;
 
         QMenu menu;
+        QAction* rename = menu.addAction("Rename");
         QAction* remove = menu.addAction("Delete");
 
-        if (menu.exec(viewport()->mapToGlobal(pos)) == remove)
+        QAction* selected = menu.exec(viewport()->mapToGlobal(pos));
+
+        if (selected == rename)
+        {
+            editItem(item, 0);
+        }
+        else if (selected == remove)
         {
             uint64_t id = item->data(0, Qt::UserRole).toULongLong();
             emit deleteRequested(id);
+
+
         }
+
+
     });
+
+
+
+
+    connect(this, &QTreeWidget::itemChanged,
+        this, [&, engine](QTreeWidgetItem* item, int column)
+    {
+        if (column != 0)
+            return;
+
+        uint64_t id =
+            item->data(0, Qt::UserRole).toULongLong();
+
+        SceneObject* object = engine->findById(id);
+
+        if (!object)
+            return;
+
+        QString newName = item->text(0).trimmed();
+
+        if (!newName.isEmpty())
+            object->name = newName;
+    });
+
+
+    
 
 
     setDragEnabled(true);
@@ -133,6 +174,10 @@ void Hierarchy::dropEvent(QDropEvent* event)
 
 void Hierarchy::refresh()
 {
+
+    QSignalBlocker blocker(this);
+
+
     clear();
 
     std::function<void(SceneObject*, QTreeWidgetItem*)> addObject;
@@ -143,10 +188,14 @@ void Hierarchy::refresh()
 
         if (parentItem)
             item = new QTreeWidgetItem(parentItem);
+            
         else
             item = new QTreeWidgetItem(this);
 
-        item->setText(0, "SceneObject");
+            
+        item->setText(0, object->name);
+        item->setFlags(item->flags() | Qt::ItemIsEditable);
+        item->setExpanded(true);
 
         uint64_t id = reinterpret_cast<uint64_t>(object);
 

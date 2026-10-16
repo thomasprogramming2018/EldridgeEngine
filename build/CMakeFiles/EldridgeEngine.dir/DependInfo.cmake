@@ -13,11 +13,15 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/zeus/Documents/EldridgeEnginev2.0/src/Camera.cpp" "CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/Editor/heirarchy.cpp" "CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/Engine.cpp" "CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o.d"
+  "/home/zeus/Documents/EldridgeEnginev2.0/src/Material.cpp" "CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o.d"
+  "/home/zeus/Documents/EldridgeEnginev2.0/src/MaterialAsset.cpp" "CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/Renderer.cpp" "CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/ResourceManager.cpp" "CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/SceneObject.cpp" "CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/Shader.cpp" "CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o.d"
+  "/home/zeus/Documents/EldridgeEnginev2.0/src/inspector.cpp" "CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/main.cpp" "CMakeFiles/EldridgeEngine.dir/src/main.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/main.cpp.o.d"
+  "/home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.cpp" "CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o.d"
   "" "EldridgeEngine" "gcc" "CMakeFiles/EldridgeEngine.dir/link.d"
   )
 

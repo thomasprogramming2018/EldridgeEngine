@@ -12,16 +12,25 @@
 
 
 class Engine;
+class SceneObject;
+struct PointLight;
+#include <vector>
+#include <cstdint>
 
 class Renderer : public QOpenGLWidget,
                  protected QOpenGLFunctions_3_3_Core
 {
+    Q_OBJECT
 public:
     explicit Renderer(Engine *engine);
 
     Camera camera;
 
     void tick(float dt);
+    void releaseObjectTextures(std::uint64_t id);
+
+signals:
+    void selectionChanged();
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;
@@ -40,7 +49,12 @@ protected:
     void keyReleaseEvent(QKeyEvent* event) override;
     void wheelEvent(QWheelEvent* event) override;
 
+
+
+
 private:
+    void refreshMaterialBuffers(SceneObject* object, const std::vector<PointLight>& nearbyLights);
+    void updateDynamicPointLights(GLuint shader, const std::vector<PointLight>& nearbyLights);
 
     QSet<int> pressedKeys;
 

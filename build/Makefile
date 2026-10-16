@@ -251,6 +251,54 @@ src/Engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.s
 .PHONY : src/Engine.cpp.s
 
+src/Material.o: src/Material.cpp.o
+.PHONY : src/Material.o
+
+# target to build an object file
+src/Material.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o
+.PHONY : src/Material.cpp.o
+
+src/Material.i: src/Material.cpp.i
+.PHONY : src/Material.i
+
+# target to preprocess a source file
+src/Material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/Material.cpp.i
+.PHONY : src/Material.cpp.i
+
+src/Material.s: src/Material.cpp.s
+.PHONY : src/Material.s
+
+# target to generate assembly for a file
+src/Material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/Material.cpp.s
+.PHONY : src/Material.cpp.s
+
+src/MaterialAsset.o: src/MaterialAsset.cpp.o
+.PHONY : src/MaterialAsset.o
+
+# target to build an object file
+src/MaterialAsset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o
+.PHONY : src/MaterialAsset.cpp.o
+
+src/MaterialAsset.i: src/MaterialAsset.cpp.i
+.PHONY : src/MaterialAsset.i
+
+# target to preprocess a source file
+src/MaterialAsset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.i
+.PHONY : src/MaterialAsset.cpp.i
+
+src/MaterialAsset.s: src/MaterialAsset.cpp.s
+.PHONY : src/MaterialAsset.s
+
+# target to generate assembly for a file
+src/MaterialAsset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.s
+.PHONY : src/MaterialAsset.cpp.s
+
 src/Renderer.o: src/Renderer.cpp.o
 .PHONY : src/Renderer.o
 
@@ -347,6 +395,30 @@ src/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.s
 .PHONY : src/Shader.cpp.s
 
+src/inspector.o: src/inspector.cpp.o
+.PHONY : src/inspector.o
+
+# target to build an object file
+src/inspector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o
+.PHONY : src/inspector.cpp.o
+
+src/inspector.i: src/inspector.cpp.i
+.PHONY : src/inspector.i
+
+# target to preprocess a source file
+src/inspector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.i
+.PHONY : src/inspector.cpp.i
+
+src/inspector.s: src/inspector.cpp.s
+.PHONY : src/inspector.s
+
+# target to generate assembly for a file
+src/inspector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.s
+.PHONY : src/inspector.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -371,6 +443,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/uiComponents/MaterialComponent.o: src/uiComponents/MaterialComponent.cpp.o
+.PHONY : src/uiComponents/MaterialComponent.o
+
+# target to build an object file
+src/uiComponents/MaterialComponent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o
+.PHONY : src/uiComponents/MaterialComponent.cpp.o
+
+src/uiComponents/MaterialComponent.i: src/uiComponents/MaterialComponent.cpp.i
+.PHONY : src/uiComponents/MaterialComponent.i
+
+# target to preprocess a source file
+src/uiComponents/MaterialComponent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.i
+.PHONY : src/uiComponents/MaterialComponent.cpp.i
+
+src/uiComponents/MaterialComponent.s: src/uiComponents/MaterialComponent.cpp.s
+.PHONY : src/uiComponents/MaterialComponent.s
+
+# target to generate assembly for a file
+src/uiComponents/MaterialComponent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.s
+.PHONY : src/uiComponents/MaterialComponent.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -394,6 +490,12 @@ help:
 	@echo "... src/Engine.o"
 	@echo "... src/Engine.i"
 	@echo "... src/Engine.s"
+	@echo "... src/Material.o"
+	@echo "... src/Material.i"
+	@echo "... src/Material.s"
+	@echo "... src/MaterialAsset.o"
+	@echo "... src/MaterialAsset.i"
+	@echo "... src/MaterialAsset.s"
 	@echo "... src/Renderer.o"
 	@echo "... src/Renderer.i"
 	@echo "... src/Renderer.s"
@@ -406,9 +508,15 @@ help:
 	@echo "... src/Shader.o"
 	@echo "... src/Shader.i"
 	@echo "... src/Shader.s"
+	@echo "... src/inspector.o"
+	@echo "... src/inspector.i"
+	@echo "... src/inspector.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/uiComponents/MaterialComponent.o"
+	@echo "... src/uiComponents/MaterialComponent.i"
+	@echo "... src/uiComponents/MaterialComponent.s"
 .PHONY : help
 
 

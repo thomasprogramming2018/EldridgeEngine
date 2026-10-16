@@ -12,6 +12,10 @@ EldridgeEngine_autogen/timestamp: \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/Engine.h \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/Gizmos.h \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/Light.h \
+	/home/zeus/Documents/EldridgeEnginev2.0/src/Material.cpp \
+	/home/zeus/Documents/EldridgeEnginev2.0/src/Material.h \
+	/home/zeus/Documents/EldridgeEnginev2.0/src/MaterialAsset.cpp \
+	/home/zeus/Documents/EldridgeEnginev2.0/src/MaterialAsset.h \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/Mesh.h \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/Renderer.cpp \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/Renderer.h \
@@ -21,7 +25,11 @@ EldridgeEngine_autogen/timestamp: \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/SceneObject.h \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/Shader.cpp \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/Shader.h \
+	/home/zeus/Documents/EldridgeEnginev2.0/src/inspector.cpp \
+	/home/zeus/Documents/EldridgeEnginev2.0/src/inspector.h \
 	/home/zeus/Documents/EldridgeEnginev2.0/src/main.cpp \
+	/home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.cpp \
+	/home/zeus/Documents/EldridgeEnginev2.0/src/uiComponents/MaterialComponent.h \
 	/usr/include/GL/gl.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/bitsperlong.h \
@@ -285,8 +293,14 @@ EldridgeEngine_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/q20iterator.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/q20memory.h \
@@ -318,10 +332,16 @@ EldridgeEngine_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerinfo.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qcontiguouscache.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qdarwinhelpers.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qdatastream.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qdeadlinetimer.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qelapsedtimer.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qendian.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qexceptionhandling.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qflags.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qfloat16.h \
@@ -333,6 +353,7 @@ EldridgeEngine_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qglobalstatic.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
@@ -406,6 +427,7 @@ EldridgeEngine_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qtversionchecks.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qtypeinfo.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
@@ -413,20 +435,30 @@ EldridgeEngine_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qxptype_traits.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qyieldcpu.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QKeyEvent \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/QMatrix4x4 \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/QSurfaceFormat \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/QVector3D \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QWheelEvent \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qcursor.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qeventpoint.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qfont.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qfontinfo.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qfontmetrics.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qgenericmatrix.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication_platform.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qicon.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qinputdevice.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qinputmethod.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qkeysequence.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qmatrix4x4.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qopengl.h \
@@ -435,19 +467,28 @@ EldridgeEngine_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qopenglext.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qquaternion.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qregion.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qrgba64.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen_platform.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qsurfaceformat.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qvalidator.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/qvector2d.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qvector3d.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qvector4d.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
@@ -460,16 +501,27 @@ EldridgeEngine_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtOpenGL/qopenglversionprofile.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtOpenGL/qtopenglexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtOpenGL/qtopenglglobal.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/QOpenGLWidget \
+	/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/qopenglwidget.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/qtopenglwidgetsexports.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDockWidget \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDoubleSpinBox \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTreeWidget \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdockwidget.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qspinbox.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \

@@ -405,6 +405,9 @@ CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Light.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/ResourceManager.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/src/Material.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Gizmos.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \

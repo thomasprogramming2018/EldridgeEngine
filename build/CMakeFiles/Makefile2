@@ -88,12 +88,12 @@ CMakeFiles/EldridgeEngine.dir/all: CMakeFiles/EldridgeEngine_autogen_timestamp_d
 CMakeFiles/EldridgeEngine.dir/all: CMakeFiles/EldridgeEngine_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target EldridgeEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "Built target EldridgeEngine"
 .PHONY : CMakeFiles/EldridgeEngine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/EldridgeEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/EldridgeEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles 0
 .PHONY : CMakeFiles/EldridgeEngine.dir/rule
@@ -105,7 +105,7 @@ EldridgeEngine: CMakeFiles/EldridgeEngine.dir/rule
 # codegen rule for target.
 CMakeFiles/EldridgeEngine.dir/codegen: CMakeFiles/EldridgeEngine_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target EldridgeEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "Finished codegen for target EldridgeEngine"
 .PHONY : CMakeFiles/EldridgeEngine.dir/codegen
 
 # clean rule for target.
@@ -152,7 +152,7 @@ CMakeFiles/EldridgeEngine_autogen_timestamp_deps.dir/clean:
 CMakeFiles/EldridgeEngine_autogen.dir/all: CMakeFiles/EldridgeEngine_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine_autogen.dir/build.make CMakeFiles/EldridgeEngine_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine_autogen.dir/build.make CMakeFiles/EldridgeEngine_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=12 "Built target EldridgeEngine_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=16 "Built target EldridgeEngine_autogen"
 .PHONY : CMakeFiles/EldridgeEngine_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -169,7 +169,7 @@ EldridgeEngine_autogen: CMakeFiles/EldridgeEngine_autogen.dir/rule
 # codegen rule for target.
 CMakeFiles/EldridgeEngine_autogen.dir/codegen: CMakeFiles/EldridgeEngine_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine_autogen.dir/build.make CMakeFiles/EldridgeEngine_autogen.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=12 "Finished codegen for target EldridgeEngine_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=16 "Finished codegen for target EldridgeEngine_autogen"
 .PHONY : CMakeFiles/EldridgeEngine_autogen.dir/codegen
 
 # clean rule for target.

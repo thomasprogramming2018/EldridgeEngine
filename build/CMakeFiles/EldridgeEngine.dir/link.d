@@ -11,6 +11,10 @@ EldridgeEngine: \
   CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o \
   CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o \
   CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o \
+  CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o \
+  CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o \
+  CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o \
+  CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o \
   /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.8.2 \
@@ -154,6 +158,14 @@ CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o:
 CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o:
 
 CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o:
+
+CMakeFiles/EldridgeEngine.dir/src/Material.cpp.o:
+
+CMakeFiles/EldridgeEngine.dir/src/uiComponents/MaterialComponent.cpp.o:
+
+CMakeFiles/EldridgeEngine.dir/src/inspector.cpp.o:
+
+CMakeFiles/EldridgeEngine.dir/src/MaterialAsset.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libQt6OpenGLWidgets.so.6.8.2:
 

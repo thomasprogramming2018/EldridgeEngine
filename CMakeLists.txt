@@ -11,10 +11,13 @@ find_package(Qt6 REQUIRED COMPONENTS
     OpenGLWidgets
 )
 
+
+
 add_executable(EldridgeEngine
     src/main.cpp
     src/Engine.cpp
     src/Renderer.cpp
+    src/Renderer.h
     src/SceneObject.cpp
     src/Shader.cpp
     src/Camera.cpp
@@ -22,6 +25,19 @@ add_executable(EldridgeEngine
     src/ResourceManager.cpp  # ADD THIS
 
     src/Editor/heirarchy.cpp
+
+    
+
+    
+    src/Material.cpp
+
+    src/uiComponents/MaterialComponent.cpp
+
+
+    
+    src/inspector.cpp
+
+    src/MaterialAsset.cpp
 )
 
 target_link_libraries(EldridgeEngine PRIVATE

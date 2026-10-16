@@ -1,0 +1,15 @@
+[material]
+name = "crate"
+metallic = 0.8
+roughness = 0.65
+
+[shader]
+vertex = "src/shaders/pbr.vert"
+fragment = "src/shaders/pbr.frag"
+
+[textures]
+albedo = "src/shaders/container2.png"
+normal = "src/shaders/container2_normal.png"
+metallic = ""
+specular = "shaders/container2_specular.png"
+roughness = ""

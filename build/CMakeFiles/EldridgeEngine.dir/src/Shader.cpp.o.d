@@ -415,4 +415,7 @@ CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o: \
  /home/zeus/Documents/EldridgeEnginev2.0/src/SceneObject.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Mesh.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/AABB.h \
- /home/zeus/Documents/EldridgeEnginev2.0/src/ResourceManager.h
+ /home/zeus/Documents/EldridgeEnginev2.0/src/ResourceManager.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /home/zeus/Documents/EldridgeEnginev2.0/src/Material.h
