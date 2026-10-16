@@ -22,4 +22,6 @@ signals:
     void deleteRequested(uint64_t objectId);
     
     void objectSelected(uint64_t objectId);
+protected:
+    void dropEvent(QDropEvent* event) override;
 };

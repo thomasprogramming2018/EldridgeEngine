@@ -50,6 +50,19 @@ public:
 
     DirectionalLight dlight;
 
+    SceneObject* findById(uint64_t id)
+    {
+        for (auto& obj : objects)
+        {
+            if (reinterpret_cast<uint64_t>(obj.get()) == id)
+            {
+                return obj.get();
+            }
+        }
+
+        return nullptr;
+    }
+
 
     void selectById(uint64_t objectId)
     {

@@ -48,7 +48,8 @@ public:
 
     void updateTransform();
 
-    std::unique_ptr<QMatrix4x4> uModel;
+    std::unique_ptr<QMatrix4x4> uModel =
+    std::make_unique<QMatrix4x4>();
 
 
 

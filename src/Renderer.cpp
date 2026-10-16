@@ -133,7 +133,7 @@ void Renderer::mouseMoveEvent(QMouseEvent* event)
         engine->selectedObject->x += delta.x() * 0.01f;
         engine->selectedObject->updateTransform();
 
-        engine->gizmos->position.setX(engine->selectedObject->x);
+        engine->gizmos->position.setX(engine->selectedObject->getWorldMatrix().column(3).x());
 
         qDebug() << "Object X:" << engine->selectedObject->x;
         update();
@@ -145,7 +145,7 @@ void Renderer::mouseMoveEvent(QMouseEvent* event)
         engine->selectedObject->y += -delta.y() * 0.01f;
         engine->selectedObject->updateTransform();
 
-        engine->gizmos->position.setY(engine->selectedObject->y);
+        engine->gizmos->position.setY(engine->selectedObject->getWorldMatrix().column(3).y());
 
         qDebug() << "Object X:" << engine->selectedObject->y;
         update();
@@ -157,7 +157,7 @@ void Renderer::mouseMoveEvent(QMouseEvent* event)
         engine->selectedObject->z += delta.y() * 0.01f;
         engine->selectedObject->updateTransform();
 
-        engine->gizmos->position.setZ(engine->selectedObject->z);
+        engine->gizmos->position.setZ(engine->selectedObject->getWorldMatrix().column(3).z());
 
         qDebug() << "Object X:" << engine->selectedObject->z;
         update();
@@ -224,13 +224,7 @@ void Renderer::mousePressEvent(QMouseEvent* event)
     QVector3D shoot = camera.position + rayDirection * 3000;
 
 
-    if (engine->selectedObject &&
-    rayAABB(rayOrigin, rayDirection, engine->gizmos->aabbx))
-    {
-        engine->gizmos->state->dragging_state = gState::draggingX;
-        qDebug() << "Started dragging X";
-        return;
-    }
+
     auto& gizmo = *engine->gizmos;
 
     // Check gizmo BEFORE clearing the selected object
@@ -454,7 +448,7 @@ void Renderer::paintGL()
         }
 
 
-        setMat4("uModel", *obj->uModel);
+        setMat4("uModel", obj->getWorldMatrix());
         setMat4("uView", camera.uView);
         setMat4("uProjection", camera.uProjection);
         int textureUnit = 0;

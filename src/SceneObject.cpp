@@ -13,7 +13,6 @@
 
 void SceneObject::updateTransform()
 {
-    uModel->setToIdentity();
     *uModel = getWorldMatrix();
 }
 
