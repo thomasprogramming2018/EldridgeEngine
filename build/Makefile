@@ -129,6 +129,56 @@ EldridgeEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/build
 .PHONY : EldridgeEngine/fast
 
+#=============================================================================
+# Target rules for targets named EldridgeEngine_autogen_timestamp_deps
+
+# Build rule for target.
+EldridgeEngine_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EldridgeEngine_autogen_timestamp_deps
+.PHONY : EldridgeEngine_autogen_timestamp_deps
+
+# fast build rule for target.
+EldridgeEngine_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine_autogen_timestamp_deps.dir/build.make CMakeFiles/EldridgeEngine_autogen_timestamp_deps.dir/build
+.PHONY : EldridgeEngine_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named EldridgeEngine_autogen
+
+# Build rule for target.
+EldridgeEngine_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EldridgeEngine_autogen
+.PHONY : EldridgeEngine_autogen
+
+# fast build rule for target.
+EldridgeEngine_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine_autogen.dir/build.make CMakeFiles/EldridgeEngine_autogen.dir/build
+.PHONY : EldridgeEngine_autogen/fast
+
+EldridgeEngine_autogen/mocs_compilation.o: EldridgeEngine_autogen/mocs_compilation.cpp.o
+.PHONY : EldridgeEngine_autogen/mocs_compilation.o
+
+# target to build an object file
+EldridgeEngine_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o
+.PHONY : EldridgeEngine_autogen/mocs_compilation.cpp.o
+
+EldridgeEngine_autogen/mocs_compilation.i: EldridgeEngine_autogen/mocs_compilation.cpp.i
+.PHONY : EldridgeEngine_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+EldridgeEngine_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.i
+.PHONY : EldridgeEngine_autogen/mocs_compilation.cpp.i
+
+EldridgeEngine_autogen/mocs_compilation.s: EldridgeEngine_autogen/mocs_compilation.cpp.s
+.PHONY : EldridgeEngine_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+EldridgeEngine_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EldridgeEngine.dir/build.make CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.s
+.PHONY : EldridgeEngine_autogen/mocs_compilation.cpp.s
+
 src/Camera.o: src/Camera.cpp.o
 .PHONY : src/Camera.o
 
@@ -329,7 +379,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... EldridgeEngine_autogen"
+	@echo "... EldridgeEngine_autogen_timestamp_deps"
 	@echo "... EldridgeEngine"
+	@echo "... EldridgeEngine_autogen/mocs_compilation.o"
+	@echo "... EldridgeEngine_autogen/mocs_compilation.i"
+	@echo "... EldridgeEngine_autogen/mocs_compilation.s"
 	@echo "... src/Camera.o"
 	@echo "... src/Camera.i"
 	@echo "... src/Camera.s"

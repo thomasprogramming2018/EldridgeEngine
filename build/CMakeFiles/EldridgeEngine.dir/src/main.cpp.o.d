@@ -478,6 +478,7 @@ CMakeFiles/EldridgeEngine.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Engine.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /home/zeus/Documents/EldridgeEnginev2.0/src/SceneObject.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Mesh.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/AABB.h \

@@ -4,6 +4,8 @@
 #include "SceneObject.h"
 #include "Shader.h"
 
+#include "Editor/heirarchy.h"
+
 
 
 
@@ -16,7 +18,26 @@ void Engine::initializeGraphics()
 }
 
 
+void Engine::deleteObject()
+{
+    if (selectedObject)
+    {
+        auto it = std::find_if(
+            objects.begin(),
+            objects.end(),
+            [this](const std::unique_ptr<SceneObject>& obj)
+            {
+                return obj.get() == selectedObject;
+            }
+        );
 
+        if (it != objects.end())
+        {
+            objects.erase(it);
+            selectedObject = nullptr;
+        }
+    }
+}
 
 
 Engine::Engine()
@@ -48,6 +69,14 @@ Engine::Engine()
 
 
     gizmos = std::make_unique<Gizmos>();
+
+
+
+
+    
+
+
+    
 
 
 }
@@ -90,6 +119,8 @@ void Engine::createObject(
     objects.push_back(
         std::make_unique<SceneObject>(buffers, mesh)
     );
+
+    emit objectCreated();
 
 
 }

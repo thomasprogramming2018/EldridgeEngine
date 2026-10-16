@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "" "EldridgeEngine_autogen/timestamp" "custom" "EldridgeEngine_autogen/deps"
+  "/home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/mocs_compilation.cpp" "CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/Camera.cpp" "CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/Editor/heirarchy.cpp" "CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o.d"
   "/home/zeus/Documents/EldridgeEnginev2.0/src/Engine.cpp" "CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o" "gcc" "CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o.d"

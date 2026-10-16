@@ -2,6 +2,7 @@ EldridgeEngine: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o \
+  CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o \
   CMakeFiles/EldridgeEngine.dir/src/main.cpp.o \
   CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o \
   CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o \
@@ -135,6 +136,8 @@ EldridgeEngine: \
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o:
+
+CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o:
 
 CMakeFiles/EldridgeEngine.dir/src/main.cpp.o:
 

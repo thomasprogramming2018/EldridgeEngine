@@ -455,6 +455,7 @@ CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Engine.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /home/zeus/Documents/EldridgeEnginev2.0/src/SceneObject.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Mesh.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/AABB.h \

@@ -69,13 +69,33 @@ include CMakeFiles/EldridgeEngine.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/EldridgeEngine.dir/flags.make
 
+EldridgeEngine_autogen/timestamp: /usr/lib/qt6/libexec/moc
+EldridgeEngine_autogen/timestamp: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target EldridgeEngine"
+	/usr/bin/cmake -E cmake_autogen /home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles/EldridgeEngine_autogen.dir/AutogenInfo.json Debug
+	/usr/bin/cmake -E touch /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/timestamp
+
 CMakeFiles/EldridgeEngine.dir/codegen:
 .PHONY : CMakeFiles/EldridgeEngine.dir/codegen
+
+CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
+CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o: EldridgeEngine_autogen/mocs_compilation.cpp
+CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o -MF CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/mocs_compilation.cpp
+
+CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/mocs_compilation.cpp > CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zeus/Documents/EldridgeEnginev2.0/build/EldridgeEngine_autogen/mocs_compilation.cpp -o CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/EldridgeEngine.dir/src/main.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
 CMakeFiles/EldridgeEngine.dir/src/main.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/main.cpp
 CMakeFiles/EldridgeEngine.dir/src/main.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/main.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/main.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/main.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/main.cpp
 
 CMakeFiles/EldridgeEngine.dir/src/main.cpp.i: cmake_force
@@ -89,7 +109,7 @@ CMakeFiles/EldridgeEngine.dir/src/main.cpp.s: cmake_force
 CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
 CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/Engine.cpp
 CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/Engine.cpp
 
 CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.i: cmake_force
@@ -103,7 +123,7 @@ CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.s: cmake_force
 CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
 CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/Renderer.cpp
 CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/Renderer.cpp
 
 CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.i: cmake_force
@@ -117,7 +137,7 @@ CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.s: cmake_force
 CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
 CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/SceneObject.cpp
 CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/SceneObject.cpp
 
 CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.i: cmake_force
@@ -131,7 +151,7 @@ CMakeFiles/EldridgeEngine.dir/src/SceneObject.cpp.s: cmake_force
 CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
 CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/Shader.cpp
 CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/Shader.cpp
 
 CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.i: cmake_force
@@ -145,7 +165,7 @@ CMakeFiles/EldridgeEngine.dir/src/Shader.cpp.s: cmake_force
 CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
 CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/Camera.cpp
 CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/Camera.cpp
 
 CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.i: cmake_force
@@ -159,7 +179,7 @@ CMakeFiles/EldridgeEngine.dir/src/Camera.cpp.s: cmake_force
 CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
 CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/ResourceManager.cpp
 CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/ResourceManager.cpp
 
 CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.i: cmake_force
@@ -173,7 +193,7 @@ CMakeFiles/EldridgeEngine.dir/src/ResourceManager.cpp.s: cmake_force
 CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o: CMakeFiles/EldridgeEngine.dir/flags.make
 CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o: /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/heirarchy.cpp
 CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o: CMakeFiles/EldridgeEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o -MF CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o.d -o CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o -c /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/heirarchy.cpp
 
 CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.i: cmake_force
@@ -186,6 +206,7 @@ CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.s: cmake_force
 
 # Object files for target EldridgeEngine
 EldridgeEngine_OBJECTS = \
+"CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/EldridgeEngine.dir/src/main.cpp.o" \
 "CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o" \
 "CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o" \
@@ -198,6 +219,7 @@ EldridgeEngine_OBJECTS = \
 # External object files for target EldridgeEngine
 EldridgeEngine_EXTERNAL_OBJECTS =
 
+EldridgeEngine: CMakeFiles/EldridgeEngine.dir/EldridgeEngine_autogen/mocs_compilation.cpp.o
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/main.cpp.o
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/Engine.cpp.o
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/src/Renderer.cpp.o
@@ -216,7 +238,7 @@ EldridgeEngine: /usr/lib/x86_64-linux-gnu/libGLX.so
 EldridgeEngine: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 EldridgeEngine: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.8.2
 EldridgeEngine: CMakeFiles/EldridgeEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable EldridgeEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable EldridgeEngine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EldridgeEngine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -227,7 +249,7 @@ CMakeFiles/EldridgeEngine.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/EldridgeEngine.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/EldridgeEngine.dir/clean
 
-CMakeFiles/EldridgeEngine.dir/depend:
+CMakeFiles/EldridgeEngine.dir/depend: EldridgeEngine_autogen/timestamp
 	cd /home/zeus/Documents/EldridgeEnginev2.0/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zeus/Documents/EldridgeEnginev2.0 /home/zeus/Documents/EldridgeEnginev2.0 /home/zeus/Documents/EldridgeEnginev2.0/build /home/zeus/Documents/EldridgeEnginev2.0/build /home/zeus/Documents/EldridgeEnginev2.0/build/CMakeFiles/EldridgeEngine.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/EldridgeEngine.dir/depend
 

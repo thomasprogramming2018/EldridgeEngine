@@ -11,7 +11,7 @@ Camera::Camera()
     uProjection.perspective(
         60.0f,   // FOV
         16.0f / 9.0f, // Aspect ratio
-        0.1f,    // Near plane
-        100.0f   // Far plane
+        0.01f,    // Near plane
+        1000.0f   // Far plane
     );
 }

@@ -57,8 +57,10 @@ vec3 calculateNormal()
     vec3 N = normalize(Normal);
 
     vec3 normalColor = texture(material.normal, TexCoords).rgb;
-    vec3 mappedNormal = normalize(normalColor * 2.0 - 1.0);
+    vec3 mappedNormal = normalColor * 2.0 - 1.0;
 
+    mappedNormal.xy *= 1.0;
+    mappedNormal = normalize(mappedNormal);
     vec3 dp1 = dFdx(WorldPos);
     vec3 dp2 = dFdy(WorldPos);
 

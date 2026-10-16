@@ -104,6 +104,8 @@ int main(int argc, char *argv[])
 
     createCube->setText("create Cube");
 
+    viewport->update();
+
     hierarchy2->refresh();
 
 
@@ -121,6 +123,32 @@ int main(int argc, char *argv[])
     window.addDockWidget(
         Qt::LeftDockWidgetArea,
         heirarchy);
+
+
+ 
+    QObject::connect(
+        hierarchy2,
+       &Hierarchy::deleteRequested,
+       &window,
+       [&](uint64_t id)
+       {
+           engine.deleteObject();
+           hierarchy2->refresh();
+           viewport->update();
+       }
+    );
+    
+    QObject::connect(
+        hierarchy2,
+        &Hierarchy::objectSelected,
+        &window,
+        [&](uint64_t id)
+        {
+            engine.selectById(id);
+            viewport->update();
+        }
+    );
+
 
 
 

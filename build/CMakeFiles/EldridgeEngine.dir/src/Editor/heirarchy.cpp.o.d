@@ -408,6 +408,8 @@ CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtreewidgetitemiterator.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/../Engine.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/../SceneObject.h \
  /usr/include/x86_64-linux-gnu/qt6/QtOpenGL/QOpenGLFunctions_3_3_Core \
  /usr/include/x86_64-linux-gnu/qt6/QtOpenGL/qopenglfunctions_3_3_core.h \
@@ -444,4 +446,6 @@ CMakeFiles/EldridgeEngine.dir/src/Editor/heirarchy.cpp.o: \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/../Light.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/../ResourceManager.h \
  /home/zeus/Documents/EldridgeEnginev2.0/src/Editor/../Gizmos.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTreeWidgetItem
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTreeWidgetItem \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h

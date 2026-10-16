@@ -1,4 +1,6 @@
 #pragma once
+#include <QObject>
+
 #include "SceneObject.h"
 
 #include "Shader.h"
@@ -7,13 +9,7 @@
 
 #include "ResourceManager.h"
 
-
-
 #include "Gizmos.h"
-
-
-
-
 
 
 enum class MaterialType
@@ -22,8 +18,10 @@ enum class MaterialType
     CUSTOM,
 };
 
-class Engine : public Shader
+class Engine : public QObject, public Shader
 {
+    Q_OBJECT
+
 private:
 public:
     ResourceManager resources;
@@ -51,4 +49,25 @@ public:
     SceneObject* selectedObject = nullptr;
 
     DirectionalLight dlight;
+
+
+    void selectById(uint64_t objectId)
+    {
+        for (auto& obj : objects)
+        {
+            if (reinterpret_cast<uint64_t>(obj.get()) == objectId)
+            {
+                selectedObject = obj.get();
+                return;
+            }
+        }
+        selectedObject = nullptr; // Clear selection if not found
+    }
+
+
+    void deleteObject();
+
+
+signals:
+    void objectCreated();
 };
