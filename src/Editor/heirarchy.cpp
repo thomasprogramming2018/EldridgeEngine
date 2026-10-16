@@ -62,37 +62,72 @@ void Hierarchy::dropEvent(QDropEvent* event)
 {
     QTreeWidgetItem* dragged = currentItem();
 
-    QTreeWidgetItem* target =
-        itemAt(event->position().toPoint());
-
-    if (!dragged || !target)
-        return;
-
-    uint64_t draggedId = dragged->data(0, Qt::UserRole).toULongLong();
-    uint64_t targetId = target->data(0, Qt::UserRole).toULongLong();
-    
-    if (dropIndicatorPosition() != QAbstractItemView::OnItem)
+    if (!dragged || event->source() != this)
     {
         event->ignore();
         return;
     }
+
+    uint64_t draggedId =
+        dragged->data(0, Qt::UserRole).toULongLong();
 
     SceneObject* draggedObject = engine->findById(draggedId);
-    SceneObject* targetObject = engine->findById(targetId);
 
-    if (!draggedObject || !targetObject)
+    if (!draggedObject)
     {
         event->ignore();
         return;
     }
 
-    draggedObject->setParent(targetObject);
+    SceneObject* newParent = nullptr;
+
+    auto position = dropIndicatorPosition();
+
+    if (position != QAbstractItemView::OnViewport)
+    {
+        QTreeWidgetItem* target =
+            itemAt(event->position().toPoint());
+
+        if (!target)
+        {
+            event->ignore();
+            return;
+        }
+
+        QTreeWidgetItem* parentItem = nullptr;
+
+        if (position == QAbstractItemView::OnItem)
+        {
+            parentItem = target;
+        }
+        else
+        {
+            // AboveItem / BelowItem:
+            // Become a sibling of the target.
+            parentItem = target->parent();
+        }
+
+        if (parentItem)
+        {
+            uint64_t id =
+                parentItem->data(0, Qt::UserRole).toULongLong();
+
+            newParent = engine->findById(id);
+
+            if (!newParent)
+            {
+                event->ignore();
+                return;
+            }
+        }
+    }
+
+    // nullptr means scene root.
+    draggedObject->setParent(newParent);
 
     refresh();
 
     event->acceptProposedAction();
-
-
 }
 
 
