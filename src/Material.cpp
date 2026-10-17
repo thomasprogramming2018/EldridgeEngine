@@ -57,6 +57,7 @@ std::vector<Buffer> Material::createPBRMaterial(
     vector("material.emissive", emissive);
     scalar("material.metallic", metallic);
     scalar("material.roughness", roughness);
+    scalar("material.normalStrength", normalStrength);
 
     const auto count = std::min(nearbyLights.size(), std::size_t{32});
     integer("lightCount", static_cast<int>(count));

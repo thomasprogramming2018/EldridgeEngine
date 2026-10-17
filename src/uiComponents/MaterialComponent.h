@@ -44,6 +44,7 @@ private:
     QLineEdit* roughnessPathInput = nullptr;
     QDoubleSpinBox* metallicInput = nullptr;
     QDoubleSpinBox* roughnessInput = nullptr;
+    QDoubleSpinBox* normalStrengthInput = nullptr;
     Vector3Field* albedoInput = nullptr;
     Vector3Field* specularInput = nullptr;
     Vector3Field* normalInput = nullptr;
@@ -51,8 +52,14 @@ private:
     Vector3Field* emissiveInput = nullptr;
 
     QLineEdit* addPathField(QFormLayout* layout, const QString& title, const QString& filter);
+    void configurePathFields(QFormLayout* form);
+    void configureScalarFields(QFormLayout* form);
+    void configureVectorFields(QFormLayout* form);
+    void clearForm();
     void fillFromMaterial();
+    void fillFormFromMaterial(const Material& material);
     void copyFormTo(Material& target) const;
+    static QString toAssetRelativePath(const Material& material, const QString& rawPath);
     void apply();
     void save();
     void saveAs();

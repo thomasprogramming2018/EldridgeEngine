@@ -91,7 +91,7 @@ Engine::Engine()
 
     dlight1.diffuse = QVector3D(0.7f, 0.8f, 0.3f);
 
-    dlight1.Dir = QVector3D(0.5f, 1.0f, 0.5f);
+    dlight1.Dir = QVector3D(0.5f, -1.0f, 0.5f);
 
     dlight1.normal = QVector3D(1.0f, 1.0f, 1.0f);
 

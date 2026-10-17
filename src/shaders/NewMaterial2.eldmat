@@ -1,0 +1,17 @@
+# EldridgeEngine material asset (TOML v1)
+version = 1
+vertex_shader = "pbr.vert"
+fragment_shader = "pbr.frag"
+albedo_texture = "container2.png"
+specular_texture = "container2_specular.png"
+normal_texture = "container2_normal.png"
+metallic_texture = "container2_specular.png"
+roughness_texture = "container2_specular.png"
+albedo = [1.29999995, 1, 1]
+specular = [1, 1, 1]
+normal = [0, 0, 1]
+ambient = [0.300000012, 0.300000012, 0.449999988]
+emissive = [0, 0, 0]
+metallic = 1
+roughness = 0.349999994
+normal_strength = 2

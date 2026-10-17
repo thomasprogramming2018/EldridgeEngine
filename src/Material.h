@@ -23,6 +23,7 @@ public:
     QVector3D emissive {0.f, 0.f, 0.f};
     float metallic = 0.f;
     float roughness = 0.5f;
+    float normalStrength = 1.5f;  // 0 = flat, 1 = original, 2 = stronger
 
     QString vert = "src/shaders/pbr.vert";
     QString frag = "src/shaders/pbr.frag";

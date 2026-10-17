@@ -49,9 +49,6 @@ protected:
     void keyReleaseEvent(QKeyEvent* event) override;
     void wheelEvent(QWheelEvent* event) override;
 
-
-
-
 private:
     void refreshMaterialBuffers(SceneObject* object, const std::vector<PointLight>& nearbyLights);
     void updateDynamicPointLights(GLuint shader, const std::vector<PointLight>& nearbyLights);

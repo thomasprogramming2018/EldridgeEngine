@@ -82,6 +82,7 @@ bool MaterialAsset::save(const Material& material, const QString& absolutePath, 
     v("emissive", material.emissive);
     f("metallic", material.metallic);
     f("roughness", material.roughness);
+    f("normal_strength", material.normalStrength);
     out.flush();
     if (out.status() != QTextStream::Ok || !file.commit()) {
         fail(error, "Could not finish saving .eldmat: " + file.errorString()); return false;
@@ -130,12 +131,15 @@ bool MaterialAsset::load(Material& destination, const QString& absolutePath, QSt
         else if (key == "emissive") ok = getVec(value, loaded.emissive);
         else if (key == "metallic") ok = getNumber(value, loaded.metallic);
         else if (key == "roughness") ok = getNumber(value, loaded.roughness);
+        else if (key == "normal_strength") ok = getNumber(value, loaded.normalStrength);
         // Unknown schema keys are not supported by this intentionally small parser.
         else ok = false;
         if (!ok) { fail(error, QString("Line %1: invalid or unknown key '%2'").arg(lineNo).arg(key)); return false; }
     }
     if (!visited.contains("version") || loaded.metallic < 0.f || loaded.metallic > 1.f ||
-        loaded.roughness < 0.f || loaded.roughness > 1.f || loaded.vert.isEmpty() || loaded.frag.isEmpty()) {
+        loaded.roughness < 0.f || loaded.roughness > 1.f ||
+        loaded.normalStrength < 0.f || loaded.normalStrength > 2.f ||
+        loaded.vert.isEmpty() || loaded.frag.isEmpty()) {
         fail(error, "Missing/invalid version, shader path or metallic/roughness range"); return false;
     }
     loaded.assetPath = QFileInfo(absolutePath).absoluteFilePath();
